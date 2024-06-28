@@ -12,8 +12,9 @@ const mysql = require("mysql")
 
 const connection = mysql.createConnection(config)
 
-/* const sql = `INSERT INTO people(name) VALUES('alef')`;
-connection.query(sql) */
+const sql = `INSERT INTO people(name) VALUES('alef')`;
+connection.query(sql)
+
 let peopleHtml
 connection.query(`SELECT * FROM people`, (error, results, fields) => {
     if (error) {
