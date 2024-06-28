@@ -20,9 +20,9 @@ connection.query(`SELECT * FROM people`, (error, results, fields) => {
         return;
     }
 
-    peopleHtml = results.map(element => `<p>${element.name}</p>`).join('');
+    /*peopleHtml = results.map(element => `<p>${element.name}</p>`).join(''); */
 
-    /* peopleHtml = `<p> ${results[1].name}</p>` */
+     peopleHtml = `<p> ${results[1].name}</p>` 
 
 });
 connection.end()
