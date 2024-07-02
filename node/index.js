@@ -29,7 +29,7 @@ connection.query(`SELECT * FROM people`, (error, results, fields) => {
 connection.end()
 
 app.get("/", async (req, res) => {
-    res.send(`<div><h1>Full Cycle Rocks! oioi   </h1>${peopleHtml}</div>`);
+    res.send(`<div><h1>Full Cycle Rocks! </h1>${peopleHtml}</div>`);
 })
 
 
