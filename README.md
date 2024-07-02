@@ -1,1 +1,3 @@
 # Full Cycle Desafio Nodejs com Nginx
+
+Tem que criar a table people...
