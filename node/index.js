@@ -8,29 +8,28 @@ const config = {
     password: "root",
     database: "nodedb"
 }
-const mysql = require("mysql")
+const mysql = require("mysql")  
 
 const connection = mysql.createConnection(config)
 
 const sql = `INSERT INTO people(name) VALUES('alef')`;
 connection.query(sql)
 
-let peopleHtml
+let peopleHtml = ""
 connection.query(`SELECT * FROM people`, (error, results, fields) => {
     if (error) {
         return;
     }
 
     /* peopleHtml = results.map(element => `<p>${element.name}</p>`).join(''); */
-
-    peopleHtml = `<p> ${results[1].name}</p>`
+    
+    peopleHtml = `<p> ${results[0].name}</p>`
 
 });
 connection.end()
 
 app.get("/", async (req, res) => {
-
-    res.send(`<div><h1>Full Cycle Rocks!</h1>${peopleHtml}</div>`);
+    res.send(`<div><h1>Full Cycle Rocks! oioi   </h1>${peopleHtml}</div>`);
 })
 
 
